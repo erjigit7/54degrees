@@ -11,7 +11,7 @@ const FullScreenIframe = () => {
 
   return (
     <div style={{ position: 'fixed', top: 0, left: 0, width: '100%', height: '100%' }}>
-      {isLoaded && (
+      {/* {isLoaded && (
         <a 
           href="https://avangardstyle.kg/" 
           target="_blank" 
@@ -29,15 +29,16 @@ const FullScreenIframe = () => {
             alt="Company Logo" 
           />
         </a>
-      )}
+      )} */}
 
-      {/* iframe, с обработчиком загрузки */}
-      <iframe
+      {/* <iframe
         src="https://my.treedis.com/tour/panorama-park"
         style={{ width: '100%', height: '100%', border: 'none' }}
         allowFullScreen
         onLoad={handleIframeLoad}
-      ></iframe>
+      ></iframe> */}
+
+      <iframe width="853" height="480" src="https://my.matterport.com/show/?m=T35E9Nbq5dS" frameborder="0" allowfullscreen allow="autoplay; fullscreen; web-share; xr-spatial-tracking;"></iframe>
     </div>
   );
 };

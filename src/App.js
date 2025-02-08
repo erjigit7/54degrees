@@ -14,9 +14,7 @@ const App = () => {
       <Routes>
       <Route path="/" element={<Home />} />
         <Route path="/panorama-home" element={<HomePage />} />
-        <Route path="/panorama-3d-tour" element={<FullScreenIframe />} />
-        <Route path="/moskva-home" element={<HomeMoskva />} />
-        <Route path="/moskva-sity-3d-tour" element={<MoskvaSiti />} />
+        <Route path="/arzy-groups" element={<FullScreenIframe />} />
       </Routes>
     </Router>
   );
