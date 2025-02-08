@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import logo from './logo.png';
 import './FullScreenIframe.css';
 
 const FullScreenIframe = () => {
@@ -38,7 +37,7 @@ const FullScreenIframe = () => {
         onLoad={handleIframeLoad}
       ></iframe> */}
 
-      <iframe width="853" height="480" src="https://my.matterport.com/show/?m=T35E9Nbq5dS" frameborder="0" allowfullscreen allow="autoplay; fullscreen; web-share; xr-spatial-tracking;"></iframe>
+      <iframe width="100%" height="100%" src="https://my.matterport.com/show/?m=T35E9Nbq5dS&play=1" frameborder="0" allowfullscreen allow="autoplay; fullscreen; web-share; xr-spatial-tracking;"></iframe>
     </div>
   );
 };

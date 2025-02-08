@@ -1,22 +1,20 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import logo from "./logo.png";
-import backgroundImage from "./1-1.jpg";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import "./HomePage.css";
 
 const Logo = () => {
-  return (
-    <a
-      href="https://avangardstyle.kg/"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="d-block mb-4"
-    >
-      <img src={logo} alt="Logo" className="img-fluid"/>
-    </a>
-  );
+  // return (
+  //   // <a
+  //   //   href="https://avangardstyle.kg/"
+  //   //   target="_blank"
+  //   //   rel="noopener noreferrer"
+  //   //   className="d-block mb-4"
+  //   // >
+  //   //   <img src={logo} alt="Logo" className="img-fluid"/>
+  //   // </a>
+  // );
 };
 
 const HomePage = () => {
@@ -25,11 +23,11 @@ const HomePage = () => {
   return (
     <div
       className="vh-100 d-flex flex-column justify-content-center align-items-center text-white"
-      style={{
-        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(${backgroundImage})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-      }}
+      // style={{
+      //   backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(${backgroundImage})`,
+      //   backgroundSize: "cover",
+      //   backgroundPosition: "center",
+      // }}
     >
       {/* Логотип */}
       <div className="position-absolute top-0 start-0 m-4">
