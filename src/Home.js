@@ -7,7 +7,7 @@ const FullScreenIframe = () => {
     <div>
         <button
           className="btn btn-primary mt-4 px-4 py-2"
-          onClick={() => navigate("/panorama-home")}
+          onClick={() => navigate("/arzy-groups")}
         >
           🔥 Home
         </button>
