@@ -3,8 +3,6 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import HomePage from "./HomePage";
 import FullScreenIframe from "./FullScreenIframe";
 import Home from "./Home";
-import HomeMoskva from "./HomeMoskva";
-import MoskvaSiti from "./MoskvaSiti";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 
