@@ -2,42 +2,56 @@ import React, { useState } from 'react';
 import './FullScreenIframe.css';
 
 const FullScreenIframe = () => {
-  const [isLoaded, setIsLoaded] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [iframeSrc, setIframeSrc] = useState('https://my.matterport.com/show/?m=T35E9Nbq5dS&play=1'); // По умолчанию
 
-  const handleIframeLoad = () => {
-    setIsLoaded(true); // Показываем логотип, когда iframe загружен
+  // Функция для переключения меню
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  // Функция для закрытия меню при клике вне его
+  const closeMenu = (e) => {
+    if (e.target.classList.contains('overlay')) {
+      setIsMenuOpen(false);
+    }
+  };
+
+  // Функция для смены iframe и закрытия меню
+  const changeIframe = (url) => {
+    setIframeSrc(url);
+    setIsMenuOpen(false);
   };
 
   return (
-    <div style={{ position: 'fixed', top: 0, left: 0, width: '100%', height: '100%' }}>
-      {/* {isLoaded && (
-        <a 
-          href="https://avangardstyle.kg/" 
-          target="_blank" 
-          rel="noopener noreferrer" 
-          style={{
-            position: 'absolute',
-            top: '50px',
-            left: '50px',
-            zIndex: 1000,
-          }}
-        >
-          <img 
-            src={logo}
-            className='img-fluid'
-            alt="Company Logo" 
-          />
-        </a>
-      )} */}
+    <div className="fullscreen-container">
+      {/* Затемнение фона при открытом меню */}
+      {isMenuOpen && <div className="overlay" onClick={closeMenu}></div>}
 
-      {/* <iframe
-        src="https://my.treedis.com/tour/panorama-park"
-        style={{ width: '100%', height: '100%', border: 'none' }}
+      {/* Бургер-кнопка */}
+      <button className="burger-menu" onClick={toggleMenu}>
+        {isMenuOpen ? '✖' : '☰'}
+      </button>
+
+      {/* Меню справа */}
+      <div className={`menu ${isMenuOpen ? 'open' : ''}`}>
+        <ul>
+          <li><a href="#" onClick={() => changeIframe('https://my.matterport.com/show/?m=T35E9Nbq5dS&play=1')}>Двор</a></li>
+          <li><a href="#" onClick={() => changeIframe('https://my.matterport.com/show/?m=t56WmJ8xJs8&play=1')}>Ресепшн</a></li>
+          <li><a href="#" onClick={() => changeIframe('https://my.matterport.com/show/?m=4X2J8E1HfDP&play=1')}>Квартира</a></li>
+        </ul>
+      </div>
+
+      {/* Iframe, который меняется */}
+      <iframe
+        className="iframe"
+        width="100%"
+        height="100%"
+        src={iframeSrc}
+        frameBorder="0"
         allowFullScreen
-        onLoad={handleIframeLoad}
-      ></iframe> */}
-
-      <iframe width="100%" height="100%" src="https://my.matterport.com/show/?m=T35E9Nbq5dS&play=1" frameborder="0" allowfullscreen allow="autoplay; fullscreen; web-share; xr-spatial-tracking;"></iframe>
+        allow="autoplay; fullscreen; web-share; xr-spatial-tracking;"
+      ></iframe>
     </div>
   );
 };

@@ -1,0 +1,42 @@
+/* Контейнер меню */
+.bm-menu-wrap {
+    position: fixed !important;
+    width: 300px !important; /* Фиксированная ширина */
+    height: 100% !important;
+    right: 0;
+    top: 0;
+  }
+  
+  /* Само меню */
+  .bm-menu {
+    background: #333 !important;
+    padding: 2rem;
+    font-size: 1.2rem;
+    width: 100% !important;
+    max-width: 300px !important;
+  }
+  
+  /* Ссылки */
+  .bm-menu a {
+    color: white !important;
+    text-decoration: none;
+    display: block;
+    padding: 10px 0;
+  }
+  
+  /* Бургер-иконка */
+  .bm-burger-bars {
+    background: #373a47 !important;
+  }
+  
+  .bm-burger-bars-hover {
+    background: #a90000 !important;
+  }
+  
+  /* Ограничение ширины оверлея */
+  .bm-overlay {
+    left: auto !important;
+    width: calc(100% - 300px) !important; /* Оставляем только затемнённую область */
+    background: rgba(0, 0, 0, 0.5) !important; /* Затемнение */
+  }
+  
