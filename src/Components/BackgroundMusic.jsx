@@ -5,14 +5,20 @@ const BackgroundMusic = () => {
 
   useEffect(() => {
     const playAudio = () => {
-      audioRef.current.play().catch((error) => {
-        console.log("Автозапуск заблокирован:", error);
-      });
+      if (audioRef.current) {
+        audioRef.current.play().catch((error) => {
+          console.log("Автозапуск заблокирован:", error);
+        });
+      }
     };
 
-    document.addEventListener("click", playAudio, { once: true });
+    const events = ["pointerdown", "keydown", "mousemove", "touchstart", "click"];
+    
+    events.forEach((event) => document.addEventListener(event, playAudio, { once: true }));
 
-    return () => document.removeEventListener("click", playAudio);
+    return () => {
+      events.forEach((event) => document.removeEventListener(event, playAudio));
+    };
   }, []);
 
   return (
