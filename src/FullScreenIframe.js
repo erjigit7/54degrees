@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import './FullScreenIframe.css';
+import './Components/BackgroundMusic'
+import BackgroundMusic from './Components/BackgroundMusic';
 
 const FullScreenIframe = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -25,9 +27,10 @@ const FullScreenIframe = () => {
 
   return (
     <div className="fullscreen-container">
+       <BackgroundMusic />
       {/* Затемнение фона при открытом меню */}
       {isMenuOpen && <div className="overlay" onClick={closeMenu}></div>}
-
+     
       {/* Бургер-кнопка */}
       <button className="burger-menu" onClick={toggleMenu}>
         {isMenuOpen ? '✖' : '☰'}
