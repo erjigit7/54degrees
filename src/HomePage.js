@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import "./HomePage.css";
+import backgroundImage from "./img/Grey.jpg";
 
 const Logo = () => {
   // return (
@@ -23,11 +24,11 @@ const HomePage = () => {
   return (
     <div
       className="vh-100 d-flex flex-column justify-content-center align-items-center text-white"
-      // style={{
-      //   backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(${backgroundImage})`,
-      //   backgroundSize: "cover",
-      //   backgroundPosition: "center",
-      // }}
+      style={{
+        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(${backgroundImage})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }}
     >
       {/* Логотип */}
       <div className="position-absolute top-0 start-0 m-4">
@@ -37,9 +38,9 @@ const HomePage = () => {
       {/* Контент */}
       <div className="text-center">
         <h1 className="display-5 fw-bold">
-          КД "ПАНОРАМА ПАРК"
+          ЖК "GREY"
           <br />
-          СК "АВАНГАРД СТИЛЬ"
+          СК "ARZY Group"
         </h1>
 
         {/* Офисы продаж */}
@@ -48,42 +49,31 @@ const HomePage = () => {
         <p>
           <br />
           <button
-            className="btn btn-success mb-2"
+            className="btn btn-outline-light mb-2"
             onClick={() =>
               window.open(
-                "https://2gis.kg/bishkek/firm/70000001030789847?m=74.597399%2C42.872791%2F16",
+                "https://go.2gis.com/iiZKG",
                 "_blank"
               )
             }
           >
-            <i className="fas fa-map-marker-alt"></i> ул. Токтогула 125/1
+            <i className="fas fa-map-marker-alt"></i> Проспект Чуй, 164а
           </button>
+          
           <br />
           <button
-            className="btn btn-success mb-2"
+            className="btn btn-outline-light mb-2"
             onClick={() =>
               window.open(
-                "https://2gis.kg/bishkek/search/%D1%83%D0%BB.%20%D0%A2%D0%BE%D0%BA%D0%BE%D0%BC%D0%B1%D0%B0%D0%B5%D0%B2%D0%B0%2053%2F1/firm/70000001019836817?m=74.616665%2C42.823358%2F18.6",
+                "https://go.2gis.com/deDwq",
                 "_blank"
               )
             }
           >
-            <i className="fas fa-map-marker-alt"></i> ул. Токомбаева 53/1
-          </button>
-          <br />
-          <button
-            className="btn btn-success mb-2"
-            onClick={() =>
-              window.open(
-                "https://2gis.kg/bishkek/search/%D0%95%D0%BB%D0%B8%D1%81%D0%B5%D0%B9%D1%81%D0%BA%D0%B8%D0%B5%20%D0%9F%D0%BE%D0%BB%D1%8F/firm/70000001060866566/74.620528%2C42.814776?m=74.623427%2C42.816685%2F16.81",
-                "_blank"
-              )
-            }
-          >
-            <i className="fas fa-map-marker-alt"></i> ул. Токомбаева/Куттубаева
+            <i className="fas fa-map-marker-alt"></i> Проспект Жибек-Жолу, 409
           </button>
         </p>
-          <p className="mt-3">
+          {/* <p className="mt-3">
           👉
             📧{" "}
             <a href="mailto:sales@avangardstyle.kg" className="address-link">
@@ -98,20 +88,20 @@ const HomePage = () => {
             <br />
             👉
             📞{" "}
-            <a href="tel:+996997007007" className="address-link">
-              +996 997 007 007
+            <a href="tel:+996555 055 055" className="address-link">
+              +996 555 055 055
             </a>
-          </p>
+          </p> */}
           <div className="d-flex justify-content-center gap-3 mt-4">
             <button
               className="btn btn-success"
-              onClick={() => window.open("https://wa.me/+996997007007", "_blank")}
+              onClick={() => window.open("https://wa.me/+996555 055 055", "_blank")}
             >
               WhatsApp
             </button>
             <button
               className="btn btn-danger"
-              onClick={() => window.open("https://instagram.com/avangardstyle_kg", "_blank")}
+              onClick={() => window.open("https://www.instagram.com/arzygroup.kg", "_blank")}
             >
               Instagram
             </button>
@@ -119,12 +109,15 @@ const HomePage = () => {
         </div>
 
         {/* Кнопка входа */}
-        <button
-          className="btn btn-primary mt-4 px-4 py-2"
-          onClick={() => navigate("/panorama-3d-tour")}
-        >
-          🔥 ПРОСМОТР 3D ТУРА
-        </button>
+        
+        <div className="d-flex flex-column align-items-center gap-3 mt-4">
+          <button
+            className="btn btn-primary mt-4 px-4 py-2"
+            onClick={() => navigate("/arzy-groups")}
+          >
+            🔥 ПРОСМОТР 3D ТУРА
+          </button>
+        </div>
       </div>
     </div>
   );

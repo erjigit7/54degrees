@@ -13,7 +13,7 @@ const App = () => {
       <BackgroundMusic />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/panorama-home" element={<HomePage />} />
+          <Route path="/grey-menu" element={<HomePage />} />
           <Route path="/arzy-groups" element={<FullScreenIframe />} />
         </Routes>
     </Router>
