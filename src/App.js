@@ -10,7 +10,7 @@ import "@fortawesome/fontawesome-free/css/all.min.css";
 const App = () => {
   return (
     <Router>
-      <BackgroundMusic />
+      {/* <BackgroundMusic /> */}
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/grey-menu" element={<HomePage />} />
