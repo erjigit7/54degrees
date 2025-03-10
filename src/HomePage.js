@@ -4,18 +4,19 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import "./HomePage.css";
 import backgroundImage from "./img/Grey.jpg";
+import logo from "./img/Grey_logo_w.png";
 
 const Logo = () => {
-  // return (
-  //   // <a
-  //   //   href="https://avangardstyle.kg/"
-  //   //   target="_blank"
-  //   //   rel="noopener noreferrer"
-  //   //   className="d-block mb-4"
-  //   // >
-  //   //   <img src={logo} alt="Logo" className="img-fluid"/>
-  //   // </a>
-  // );
+  return (
+    <a
+      href="https://grey.kg/"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="d-block"
+    >
+      <img src={logo} alt="Logo" className="img-fluid"/>
+    </a>
+  );
 };
 
 const HomePage = () => {
@@ -31,22 +32,22 @@ const HomePage = () => {
       }}
     >
       {/* Логотип */}
-      <div className="position-absolute top-0 start-0 m-4">
-        <Logo />
-      </div>
+      
 
       {/* Контент */}
       <div className="text-center">
-        <h1 className="display-5 fw-bold">
+        {/* <h1 className="display-5 fw-bold">
           ЖК GREY
           <br />
           СК ARZY Group
-        </h1>
-
+        </h1> */}
+        <div className="">
+          <Logo />
+        </div>
         {/* Офисы продаж */}
-        <div className="mt-4">
-        <h2 className="h4">ОФИС ПРОДАЖ</h2>
-        <h2 className="h4">Улица Игембердиева, 1а</h2>
+        <div className="">
+        <h3 className="h5">ОФИС ПРОДАЖ</h3>
+        <h3 className="h5">Улица Игембердиева, 1а</h3>
         <p>
           <br />
           <button
