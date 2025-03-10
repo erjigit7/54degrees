@@ -38,15 +38,15 @@ const HomePage = () => {
       {/* Контент */}
       <div className="text-center">
         <h1 className="display-5 fw-bold">
-          ЖК "GREY"
+          ЖК GREY
           <br />
-          СК "ARZY Group"
+          СК ARZY Group
         </h1>
 
         {/* Офисы продаж */}
         <div className="mt-4">
         <h2 className="h4">ОФИС ПРОДАЖ</h2>
-        <h2 className="h4">"Улица Игембердиева, 1а"</h2>
+        <h2 className="h4">Улица Игембердиева, 1а</h2>
         <p>
           <br />
           <button
@@ -58,7 +58,7 @@ const HomePage = () => {
               )
             }
           >
-            <i className="fas fa-map-marker-alt"></i> Бизнес-центр "Aurora"
+            <i className="fas fa-map-marker-alt"></i> Бизнес-центр Aurora
           </button>
           
           <br />
