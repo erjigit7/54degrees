@@ -5,7 +5,7 @@ import BackgroundMusic from './Components/BackgroundMusic';
 
 const FullScreenIframe = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [iframeSrc, setIframeSrc] = useState('https://my.matterport.com/show/?m=T35E9Nbq5dS&play=1'); // По умолчанию
+  const [iframeSrc, setIframeSrc] = useState('https://my.matterport.com/show/?m=aAqMcAkxfA4&play=1'); // По умолчанию
 
   // Функция для переключения меню
   const toggleMenu = () => {
@@ -39,7 +39,7 @@ const FullScreenIframe = () => {
       {/* Меню справа */}
       <div className={`menu ${isMenuOpen ? 'open' : ''}`}>
         <ul>
-          <li><a href="#" onClick={() => changeIframe('https://my.matterport.com/show/?m=T35E9Nbq5dS&play=1')}>Двор</a></li>
+          <li><a href="#" onClick={() => changeIframe('https://my.matterport.com/show/?m=aAqMcAkxfA4&play=1')}>Двор</a></li>
           <li><a href="#" onClick={() => changeIframe('https://my.matterport.com/show/?m=t56WmJ8xJs8&play=1')}>Ресепшн</a></li>
           <li><a href="#" onClick={() => changeIframe('https://my.matterport.com/show/?m=4X2J8E1HfDP&play=1')}>Квартира</a></li>
         </ul>

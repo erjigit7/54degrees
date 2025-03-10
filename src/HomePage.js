@@ -45,33 +45,23 @@ const HomePage = () => {
 
         {/* Офисы продаж */}
         <div className="mt-4">
-        <h2 className="h4">ОФИСЫ ПРОДАЖ</h2>
+        <h2 className="h4">ОФИС ПРОДАЖ</h2>
+        <h2 className="h4">"Улица Игембердиева, 1а"</h2>
         <p>
           <br />
           <button
             className="btn btn-outline-light mb-2"
             onClick={() =>
               window.open(
-                "https://go.2gis.com/iiZKG",
+                "https://go.2gis.com/9YZXL",
                 "_blank"
               )
             }
           >
-            <i className="fas fa-map-marker-alt"></i> Проспект Чуй, 164а
+            <i className="fas fa-map-marker-alt"></i> Бизнес-центр "Aurora"
           </button>
           
           <br />
-          <button
-            className="btn btn-outline-light mb-2"
-            onClick={() =>
-              window.open(
-                "https://go.2gis.com/deDwq",
-                "_blank"
-              )
-            }
-          >
-            <i className="fas fa-map-marker-alt"></i> Проспект Жибек-Жолу, 409
-          </button>
         </p>
           {/* <p className="mt-3">
           👉
