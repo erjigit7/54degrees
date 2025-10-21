@@ -111,6 +111,58 @@
   font-weight: 600;
 }
 
+/* Navigation Links */
+.nav-links {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  padding: 10px 12px;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.nav-link i {
+  margin-right: 8px;
+  font-size: 1rem;
+  width: 16px;
+  text-align: center;
+}
+
+.nav-link:hover {
+  transform: translateX(3px);
+  text-decoration: none;
+  color: white;
+}
+
+.home-link:hover {
+  background: linear-gradient(135deg, #4CAF50, #45a049);
+  border-color: #4CAF50;
+}
+
+.map-link:hover {
+  background: linear-gradient(135deg, #2196F3, #1976D2);
+  border-color: #2196F3;
+}
+
+.grey-link:hover {
+  background: linear-gradient(135deg, #9E9E9E, #757575);
+  border-color: #9E9E9E;
+}
+
+.arzy-link:hover {
+  background: linear-gradient(135deg, #FF9800, #F57C00);
+  border-color: #FF9800;
+}
+
 /* Common Areas */
 .common-areas {
   display: flex;

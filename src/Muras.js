@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import './Muras.css';
 
 const Muras = () => {
@@ -82,6 +83,29 @@ const Muras = () => {
           <h3>Навигация</h3>
         </div>
         
+        {/* Navigation */}
+        <div className="menu-section">
+          <h4>Навигация</h4>
+          <div className="nav-links">
+            <Link to="/" className="nav-link home-link">
+              <i className="fas fa-home"></i>
+              Главная
+            </Link>
+            <Link to="/map" className="nav-link map-link">
+              <i className="fas fa-map"></i>
+              Карта
+            </Link>
+            <Link to="/grey-menu" className="nav-link grey-link">
+              <i className="fas fa-bars"></i>
+              Серое меню
+            </Link>
+            <Link to="/arzy-groups" className="nav-link arzy-link">
+              <i className="fas fa-building"></i>
+              Arzy Groups
+            </Link>
+          </div>
+        </div>
+
         {/* Common Areas */}
         <div className="menu-section">
           <h4>Общие зоны</h4>

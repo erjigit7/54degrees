@@ -21,35 +21,7 @@ const Map = () => {
       position: [42.82871218691958, 74.58374602287819],
       link: "https://my.matterport.com/show/?m=aAqMcAkxfA4&cloudEdit=1&ss=1&sr=2.65,-1.31",
       description: "Проспект Мира / Южный Магистраль"
-    },
-    // {
-    //   id: 2,
-    //   name: "Times Square",
-    //   position: [40.7580, -73.9855],
-    //   link: "https://www.timessquarenyc.org/",
-    //   description: "Explore Times Square"
-    // },
-    // {
-    //   id: 3,
-    //   name: "Brooklyn Bridge",
-    //   position: [40.7061, -73.9969],
-    //   link: "https://www.nycgo.com/attractions/brooklyn-bridge",
-    //   description: "Learn about Brooklyn Bridge"
-    // },
-    // {
-    //   id: 4,
-    //   name: "Statue of Liberty",
-    //   position: [40.6892, -74.0445],
-    //   link: "https://www.nps.gov/stli/index.htm",
-    //   description: "Official Statue of Liberty information"
-    // },
-    // {
-    //   id: 5,
-    //   name: "High Line",
-    //   position: [40.7480, -74.0048],
-    //   link: "https://www.thehighline.org/",
-    //   description: "Visit the High Line park"
-    // }
+    }
   ];
 
   const handleMarkerClick = (link) => {
@@ -57,62 +29,64 @@ const Map = () => {
   };
 
   return (
-    <div className="map-container">
-      <h2 className="map-title">Интерактивная карта</h2>
-      <p className="map-description">Нажмите на маркеры, чтобы увидеть вид с птичьего полета!</p>
+    <div className="map-page">
+      <div className="map-header">
+        <h1 className="map-title">Интерактивная карта</h1>
+        <p className="map-description">Нажмите на маркеры, чтобы увидеть вид с птичьего полета!</p>
+      </div>
       
-      <MapContainer
-        center={[42.823187, 74.578024]} // Center on NYC
-        zoom={12}
-        style={{ height: '70vh', width: '100%' }}
-        className="map"
-      >
-        <TileLayer
-          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-        />
-        
-        {locations.map((location) => (
-          <Marker
-            key={location.id}
-            position={location.position}
-            eventHandlers={{
-              click: () => handleMarkerClick(location.link)
-            }}
-          >
-            <Popup>
-              <div className="popup-content">
-                <h4>{location.name}</h4>
-                <p>{location.description}</p>
-                <button 
-                  className="btn btn-primary btn-sm"
-                  onClick={() => handleMarkerClick(location.link)}
-                >
-                  Вид с птичьего полета
-                </button>
-              </div>
-            </Popup>
-          </Marker>
-        ))}
-      </MapContainer>
-      
-      <div className="map-info">
-        <h4>Доступные локации:</h4>
-        <ul className="location-list">
+      <div className="map-wrapper">
+        <MapContainer
+          center={[42.823187, 74.578024]}
+          zoom={12}
+          className="map-container"
+        >
+          <TileLayer
+            attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+          />
+          
           {locations.map((location) => (
-            <li key={location.id}>
-              <strong>{location.name}</strong> - 
-              <a 
-                href={location.link} 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="location-link"
-              >
-                Вид с птичьего полета
-              </a>
-            </li>
+            <Marker
+              key={location.id}
+              position={location.position}
+              eventHandlers={{
+                click: () => handleMarkerClick(location.link)
+              }}
+            >
+              <Popup>
+                <div className="popup-content">
+                  <h4>{location.name}</h4>
+                  <p>{location.description}</p>
+                  <button 
+                    className="popup-button"
+                    onClick={() => handleMarkerClick(location.link)}
+                  >
+                    Вид с птичьего полета
+                  </button>
+                </div>
+              </Popup>
+            </Marker>
           ))}
-        </ul>
+        </MapContainer>
+      </div>
+      
+      <div className="map-footer">
+        <div className="location-card">
+          <h3>Доступные локации</h3>
+          <div className="location-item">
+            <div className="location-info">
+              <h4>{locations[0].name}</h4>
+              <p>{locations[0].description}</p>
+            </div>
+            <button 
+              className="location-button"
+              onClick={() => handleMarkerClick(locations[0].link)}
+            >
+              Открыть
+            </button>
+          </div>
+        </div>
       </div>
     </div>
   );
