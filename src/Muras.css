@@ -1,0 +1,331 @@
+.muras-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background: #000;
+}
+
+.muras-iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* Burger Menu Button */
+.burger-menu {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1001;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  border: none;
+  padding: 12px 16px;
+  border-radius: 8px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  min-width: 44px;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+}
+
+.burger-menu:hover {
+  background: rgba(0, 0, 0, 0.9);
+  transform: scale(1.05);
+}
+
+.burger-menu:active {
+  background: rgba(0, 0, 0, 0.95);
+  transform: scale(0.95);
+}
+
+.burger-menu:focus {
+  outline: 2px solid #007bff;
+  outline-offset: 2px;
+}
+
+/* Overlay */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  backdrop-filter: blur(5px);
+}
+
+/* Navigation Menu */
+.navigation-menu {
+  position: fixed;
+  top: 0;
+  right: -400px;
+  width: 400px;
+  height: 100vh;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(240, 240, 240, 0.95));
+  backdrop-filter: blur(20px);
+  z-index: 1000;
+  transition: right 0.3s ease;
+  overflow-y: auto;
+  box-shadow: -5px 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.navigation-menu.open {
+  right: 0;
+}
+
+.menu-header {
+  padding: 20px;
+  border-bottom: 2px solid #e0e0e0;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.menu-header h3 {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.menu-section {
+  padding: 20px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.menu-section h4 {
+  margin: 0 0 15px 0;
+  color: #333;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+/* Common Areas */
+.common-areas {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.area-button {
+  background: linear-gradient(135deg, #4CAF50, #45a049);
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  flex: 1;
+  min-width: 120px;
+}
+
+.area-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(76, 175, 80, 0.4);
+}
+
+/* Floor Selector */
+.floor-selector {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+}
+
+.floor-button {
+  background: #f5f5f5;
+  color: #333;
+  border: 2px solid #ddd;
+  padding: 10px 8px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.floor-button:hover {
+  background: #e9e9e9;
+  border-color: #bbb;
+}
+
+.floor-button.active {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  border-color: #667eea;
+  transform: scale(1.05);
+}
+
+/* Apartment Grid */
+.apartment-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.apartment-button {
+  background: linear-gradient(135deg, #ff6b6b, #ee5a52);
+  color: white;
+  border: none;
+  padding: 12px 8px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.apartment-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(255, 107, 107, 0.4);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navigation-menu {
+    width: 100%;
+    right: -100%;
+  }
+  
+  .burger-menu {
+    top: 15px;
+    right: 15px;
+    padding: 12px 14px;
+    font-size: 16px;
+    min-width: 48px;
+    min-height: 48px;
+  }
+  
+  .menu-header {
+    padding: 15px;
+  }
+  
+  .menu-header h3 {
+    font-size: 1.3rem;
+  }
+  
+  .menu-section {
+    padding: 15px;
+  }
+  
+  .common-areas {
+    flex-direction: column;
+  }
+  
+  .area-button {
+    padding: 10px 15px;
+    font-size: 0.85rem;
+  }
+  
+  .floor-selector {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 6px;
+  }
+  
+  .floor-button {
+    padding: 8px 6px;
+    font-size: 0.75rem;
+  }
+  
+  .apartment-grid {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+  
+  .apartment-button {
+    padding: 10px 6px;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .burger-menu {
+    top: 10px;
+    right: 10px;
+    padding: 12px 12px;
+    font-size: 14px;
+    min-width: 48px;
+    min-height: 48px;
+  }
+  
+  .menu-header {
+    padding: 12px;
+  }
+  
+  .menu-section {
+    padding: 12px;
+  }
+  
+  .floor-selector {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4px;
+  }
+  
+  .floor-button {
+    padding: 6px 4px;
+    font-size: 0.7rem;
+  }
+  
+  .apartment-button {
+    padding: 8px 4px;
+    font-size: 0.75rem;
+  }
+}
+
+/* Scrollbar Styling */
+.navigation-menu::-webkit-scrollbar {
+  width: 6px;
+}
+
+.navigation-menu::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.navigation-menu::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 3px;
+}
+
+.navigation-menu::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Animation for smooth transitions */
+@keyframes slideIn {
+  from {
+    right: -400px;
+  }
+  to {
+    right: 0;
+  }
+}
+
+@keyframes slideOut {
+  from {
+    right: 0;
+  }
+  to {
+    right: -400px;
+  }
+}
+
+/* Loading state */
+.muras-iframe {
+  transition: opacity 0.3s ease;
+}
+
+.muras-iframe.loading {
+  opacity: 0.7;
+}
