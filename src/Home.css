@@ -8,7 +8,7 @@
 .hero-section {
   height: 100vh;
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  background-image: url('C:\Users\Erjigit\Projects\54degrees\src\img\54_logo_phone_white.png'); /* Placeholder for your logo */
+  background-image: url('./img/54_logo_phone_white.png'); /* Placeholder for your logo */
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
