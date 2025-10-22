@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-
+// BackgroundMusic component
 const BackgroundMusic = () => {
   const audioRef = useRef(null);
 
