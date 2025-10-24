@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import './Muras.css';
 
 const Muras = () => {
-  const [iframeSrc, setIframeSrc] = useState('https://my.matterport.com/show/?m=aAqMcAkxfA4&play=1'); // Default
+  const [iframeSrc, setIframeSrc] = useState('https://my.matterport.com/show/?m=R9vuUPTHfKG&play=1'); // Default
   const [selectedFloor, setSelectedFloor] = useState(1);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -24,8 +24,7 @@ const Muras = () => {
 
   // Common areas
   const commonAreas = [
-    { id: 'courtyard', name: 'Двор', url: 'https://my.matterport.com/show/?m=aAqMcAkxfA4&play=1' },
-    { id: 'reception', name: 'Ресепшн', url: 'https://my.matterport.com/show/?m=t56WmJ8xJs8&play=1' }
+    { id: 'courtyard', name: 'Двор', url: 'https://my.matterport.com/show/?m=R9vuUPTHfKG&play=1' }
   ];
 
   const toggleMenu = () => {
@@ -95,14 +94,14 @@ const Muras = () => {
               <i className="fas fa-map"></i>
               Карта
             </Link>
-            <Link to="/grey-menu" className="nav-link grey-link">
+            {/* <Link to="/grey-menu" className="nav-link grey-link">
               <i className="fas fa-bars"></i>
               Серое меню
             </Link>
             <Link to="/arzy-groups" className="nav-link arzy-link">
               <i className="fas fa-building"></i>
               Arzy Groups
-            </Link>
+            </Link> */}
           </div>
         </div>
 

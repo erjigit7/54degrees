@@ -40,19 +40,6 @@ const Home = () => {
               </div>
             </Link>
 
-            {/* <Link to="/map" className="work-card map-card">
-              <div className="work-icon">
-                <i className="fas fa-map-marked-alt"></i>
-              </div>
-              <h3>Интерактивная карта</h3>
-              <p>Географическая визуализация с точками интереса</p>
-              <div className="work-features">
-                <span className="feature-tag">Карты</span>
-                <span className="feature-tag">Маркеры</span>
-                <span className="feature-tag">Навигация</span>
-              </div>
-            </Link> */}
-
             <Link to="/arzy-groups" className="work-card arzy-card">
               <div className="work-icon">
                 <i className="fas fa-building"></i>
